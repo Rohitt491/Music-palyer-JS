@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="https://kit.fontawesome.com/b4b4e70adb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="music_container">
+            <h2 id="title">bai bai</h2>
+            <h3 id="artist">arjan dhillon</h3>
+            <div class="img_container">
+                <img src="images/Bai Bai.jpg" alt="image">
+            </div>
+            <audio src="music/Bai Bai.mp3"></audio>
+
+            <!-- volume -->
+            <div class="rep_shuf">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" id="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <!--progressbar-->
+            <div class="progressbar_main">
+                <div id="time">
+                    <p>00:00</p>
+                    <span>03:07</span>
+                </div>
+                <div id="progressbar">
+                    <input type="range" min="1" , max="100" , value="0", id="progressbar_input">
+                    <div id="track">
+                    </div>
+                </div>
+            </div>
+
+            <!-- controls -->
+            <div class="music_controls">
+                <i class="fas fa-backward" id="prev" title="Previous Track"></i>
+                <i class="fas fa-play" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next Track"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
